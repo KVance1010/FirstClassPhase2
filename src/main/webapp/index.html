@@ -1,14 +1,222 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<form action = "LoginServlet" method= "post">
-Enter User name <input type="text" name="txtuname"> <br><br>
-enter Password<input type="password" name="txtpword"><br><br>
-<input type="submit" value="Save">
-</form>
-</body>
+
+   <head>
+      <meta charset="ISO-8859-1">
+      <title>Login Page</title>
+   </head>
+   
+   <body>
+   
+      <!-- this is how you make a comment. -->
+     
+      <!--  Basic informaion for layout:
+        
+        Block elements starts with a new line and take the full width available.
+        block level coding examples
+       <div>      creates a block of code. can be used for layout purposes.
+       <h1>       header
+       <p>        Paragraph
+       <form>     helps add functionaliy and get input from the user
+  
+        Inline level do not start a new line and only use necessary width
+        Inline level coding examples
+       <span>      
+       <img>   images and is self closing    
+       <a>  creates a hyperlink in the text      
+         -->
+         
+      <!-- H1-H6 gives you different size headers -->
+      <h1>H1 heading </h1>
+      <h2>H2 heading </h2>
+      <h3>H3 heading </h3>
+    
+      <!-- Paragraph example: <p> for the paragrah. 
+        This example goes over different features to improve the look of text in your HTML doccument:
+        
+        <strong> this makes the text bold 
+        
+        <em> makes the text italicize 
+        
+        <a> hyperlink
+        
+        target = "_blank" will open a new tab. should only be used if you are opening an external link and you do 
+        not want people to leave your site. 
+        href (is an attribute) this helped open another web
+        -->
+        
+       <p>
+       This is the area that you will place any text.<strong> This will all be displayed to the webpage.</strong> 
+       This can be as long as you want.<em> This is not part of the class example.</em> Just typing more so I have more lines to 
+       do different examples on. need more text to make a
+        <a href = "https://google.com" target = "_blank"> hyperlink</a>. 
+       </p>
+       
+       <!-- list -->
+       <p>
+       <!--unordered list  <ul> , will indent and add bullot points -->
+       <ul>
+          <li>List Item 1 </li>
+          <li>List Item 2 </li>
+          <li>List Item 3 </li>
+       </ul>
+       
+       <!--ordered list  <ol> , will indent and add numbers per point-->
+       <ol>
+          <li>List Item 1 </li>
+          <li>List Item 2 </li>
+          <li>List Item 3 </li>
+       </ol>  
+        
+        <!--  table -->
+        <table>
+           
+           <!-- t-head creates the tables colume names, th for heading names -->
+           <thead>
+              <tr>
+                 <th>Name</th>
+                 <th>Age</th>
+                 <th>Email</th>
+              </tr>  
+           </thead>
+           <!-- t-body creates the tables colume content, td stands for data -->
+           <tbody>
+              
+              <tr>
+                 <td>Kyle</td>
+                 <td>36</td>
+                 <td>afkjesd@jafsdk.com</td>
+              </tr>
+               <!--  adding a second row to the table -->
+              <tr>
+                 <td>John</td>
+                 <td>46</td>
+                 <td>afkjesd@jafsdk.com</td>
+              </tr>  
+           </tbody>
+           
+        </table>
+        
+        <!-- this makes it so there is not a ton of space at the top of the page -->
+        <div style = "margin-top:300px"></div>
+        
+        
+     
+      
+       <!-- 
+            form - allows the HtML to be functional. features of form below.
+            
+            Action - states what should be accessed (i.e name of website or class name)
+            Method - is either get or post.
+                     post is more secure and used to add data to a server. get submits it to the url,
+                     used more when not using data
+            Lable - can be used for the text on screen, but is not needed. lables are inline.
+            Input type - type of information that is exspected most often it is text.
+                         Name - server side information. 
+                         Types:
+                        
+                         Emails - can be verified under the type option. 
+                         <input type = "email" name ="email"> can be used to verify an email.
+                         
+                         Number - gets a number from the user. You can give a starting value
+                         <input type = "number" name= "age" value ="30">
+                         
+                         Date - you can have a date selection as a menu
+                         <input type = "date" name = "birthdate">
+                         
+                         Submit - the form has to have a submit input type for the information to be submitted.
+                                  this is very important to have.
+                         <input type="submit" value="Save">
+                         
+            Placeholder - a placeholder allows you to add text in the in the box that the user will be typing into.
+                          <input type="text" name="txtuname" placeholder = "Enter your name">
+            Textarea - give a box for information to be saved to a database.
+                       <textarea name="message"></textarea>
+            Select -  gives you a drop down menu to choose from
+            
+         -->
+     
+     <!-- <hr> prints a line across the screen. can be used as a divider. mostly for looks
+          <br> is break and it creates a blank line on the screen
+      -->
+     <hr>
+         
+      <!-- class example -->
+      <form action = "LoginServlet" method= "post"> 
+        <div>
+            <label>Enter User name</label>
+            <input type="text" name="txtuname" placeholder = "Enter you username">
+        </div>
+        <br>
+        
+        <!-- another way to to writh this this  -->
+        enter Password<input type="password" name="txtpword" placeholder = "Enter you username"><br><br>
+        
+        <!-- this submits your information to the action  -->
+        <input type="submit" value="Save">
+        
+        
+        <div>
+             <!-- gives an text box for for the user -->
+            <label>Feedback</label>
+            <textarea name="message"></textarea>
+        </div>
+        <br>
+        
+        <div>
+        
+        <!-- this gives menu options for the user to choose from -->
+        <label>Feedback</label>
+           <select name="gender">
+              <option value ="male">Male</option> 
+              <option value ="female">Female</option> 
+              <option value ="other">Other</option> 
+           </select>
+        </div>
+        <br>
+       
+        <div>
+             <!-- gets a number form the user -->
+            <label>Age</label>
+            <input type = "number" name= "age" value ="30">
+        </div>
+        <br>
+        
+        <div>
+             <!-- gets a date form the user -->
+            <label>Date of Birth</label>
+            <input type = "date" name = "birthdate">
+        </div>
+        <br>
+    </form>  
+      
+        <!-- other features
+         
+         Functtional Button
+         outside of form you can have buttons. Buttons perform some function
+         <button click = "functionName">Click Me</button>
+         
+         Image
+         <img src="flower.jpg">
+            or using alt you can create a place holder if the image is not found. The text will be shown. 
+         <img src="flower.jpg" alt= "My Sample Image">
+            if the image is in a folder of images
+         <img src="folder/flower.jpg">
+            setting the size of the image. Should be done using css, but can be done in html.
+         <img src="flower.jpg" width = "200">  
+            height is auto, but can be specified. A link can be specified arround the photo, 
+            so that it opens in another tab.
+         <a href="flower.jpg">
+            <img src="flower.jpg">
+         </a>
+          
+            
+          -->
+          
+          
+       <!-- this button doesnt do anything -->   
+       
+       <img src="flower.jpg" width = "200" height ="300"><br>
+       <button>Click Me</button>   
+   </body>   
 </html>

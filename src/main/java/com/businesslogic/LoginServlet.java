@@ -35,9 +35,8 @@ public class LoginServlet extends HttpServlet {
 		}
 		//out.println("Welcome " + userName);
 		//out.println("your password is " + passWord);
-		//
-		}
-		
 	}
+		
+}
 
 
