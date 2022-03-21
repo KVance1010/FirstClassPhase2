@@ -11,21 +11,46 @@
       <!-- this is how you make a comment. -->
      
       <!--  Basic informaion for layout:
-        
         Block elements starts with a new line and take the full width available.
         block level coding examples
-       <div>      creates a block of code. can be used for layout purposes.
-       <h1>       header
-       <p>        Paragraph
-       <form>     helps add functionaliy and get input from the user
+        <div>      creates a block of code. can be used for layout purposes.
+        <h1>       header
+        <p>        Paragraph
+        <form>     helps add functionaliy and get input from the user
   
         Inline level do not start a new line and only use necessary width
         Inline level coding examples
-       <span>      
-       <img>   images and is self closing    
-       <a>  creates a hyperlink in the text      
-         -->
+        <span>      
+        <img>   images and is self closing    
+        <a>  creates a hyperlink in the text      
+      -->
+ 
          
+<!-- class example -->
+<!-- class example -->
+      <form action = "LoginServlet" method= "post"> 
+        <div>
+            <label>Enter User name</label>
+            <input type="text" name="txtuname" placeholder = "Enter you username">
+        </div>
+        <br>
+        
+        <!-- another way to to writh this this  -->
+        enter Password<input type="password" name="txtpword" placeholder = "Enter you username"><br><br>
+        
+        <!-- this submits your information to the action  -->
+        <input type="submit" value="Save"><br><br>
+        
+<!-- class example -->      
+<!-- class example -->           
+
+     
+     
+      <!-- <hr> prints a line across the screen. can be used as a divider. mostly for looks
+          <br> is break and it creates a blank line on the screen
+      -->
+      <hr> <br>   
+          
       <!-- H1-H6 gives you different size headers -->
       <h1>H1 heading </h1>
       <h2>H2 heading </h2>
@@ -35,9 +60,7 @@
         This example goes over different features to improve the look of text in your HTML doccument:
         
         <strong> this makes the text bold 
-        
         <em> makes the text italicize 
-        
         <a> hyperlink
         
         target = "_blank" will open a new tab. should only be used if you are opening an external link and you do 
@@ -97,11 +120,15 @@
            
         </table>
         
-        <!-- this makes it so there is not a ton of space at the top of the page -->
+        <!--  adding a horizontal line for aesthetics with a space before and after the line -->
+         <br><hr><br>    
+       
+       
+        <!-- 
+        this makes it so there is not a ton of space at the top of the page 
         <div style = "margin-top:300px"></div>
-        
-        
-     
+        -->
+      
       
        <!-- 
             form - allows the HtML to be functional. features of form below.
@@ -136,26 +163,17 @@
             
          -->
      
-     <!-- <hr> prints a line across the screen. can be used as a divider. mostly for looks
-          <br> is break and it creates a blank line on the screen
-      -->
-     <hr>
-         
-      <!-- class example -->
-      <form action = "LoginServlet" method= "post"> 
         <div>
-            <label>Enter User name</label>
-            <input type="text" name="txtuname" placeholder = "Enter you username">
+            <label>Enter your first name</label>
+            <input type="text" name="firstname" placeholder = "Enter you first name">
         </div>
         <br>
-        
-        <!-- another way to to writh this this  -->
-        enter Password<input type="password" name="txtpword" placeholder = "Enter you username"><br><br>
-        
-        <!-- this submits your information to the action  -->
-        <input type="submit" value="Save">
-        
-        
+        <div>
+            <label>Enter your last name</label>
+            <input type="text" name="lastname" placeholder = "Enter you last name">
+        </div>
+        <br>
+    
         <div>
              <!-- gives an text box for for the user -->
             <label>Feedback</label>

@@ -24,19 +24,25 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String userName = request.getParameter("txtuname");
 		String passWord = request.getParameter("txtpword");
-		if (userName.equalsIgnoreCase("admin") && passWord.equals("admin@123")) {
-				RequestDispatcher rd = request.getRequestDispatcher("Welcome.htmt");
+		
+		//out.println("Welcome " +userName);
+		//out.println("your password is " +passWord);
+		
+		if (userName.equalsIgnoreCase("admin") && passWord.equals("admin@123")) 
+		{
+				RequestDispatcher rd = request.getRequestDispatcher("Welcome.html");
 				rd.forward(request, response);
 		}
-		else {
-			out.println("invalid user name or password");
-			RequestDispatcher rd = request.getRequestDispatcher("index.htmt");
+		else 
+		{
+			out.println("Invalid user name or password:  ");
+			out.println("");
+			out.println("Please try again.");
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
 			rd.include(request, response);
 		}
-		//out.println("Welcome " + userName);
-		//out.println("your password is " + passWord);
-	}
 		
+	}
 }
 
 
